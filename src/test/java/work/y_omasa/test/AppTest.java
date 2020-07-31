@@ -26,7 +26,7 @@ public class AppTest {
     @Test(expected = NumberFormatException.class)
     public void setEmailWithWrongFormatResultException() throws Exception{
         User user = new User();
-        user.setEmail("test@example.com");　//エラー位置
+        user.setEmail("testexample.com");　//エラー位置
     }
 
     //パスワードのハッシュを設定し、正しいパスワードをチェックするとtrue
@@ -49,7 +49,7 @@ public class AppTest {
         // userにパスワードハッシュを設定
         user.setPwdHash(String.valueOf(hashedPw));        
 
-        assertTrue( user.isPwdValid("1234") ); //エラー位置
+        assertTrue( user.isPwdValid("abcd") ); //エラー位置
     }
 
     //パスワードのハッシュを設定し、誤ったパスワードをチェックするとfalse
